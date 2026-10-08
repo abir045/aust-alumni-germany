@@ -153,7 +153,7 @@ export function LeafletMapView({
   }, []);
 
   return (
-    <div className="relative h-full min-h-[420px] md:min-h-[480px] w-full overflow-hidden rounded-2xl bg-[#F8FAFC]">
+    <div className="relative z-0 isolate h-full min-h-[420px] md:min-h-[480px] w-full overflow-hidden rounded-2xl bg-[#F8FAFC]">
       {/* Federal Regional Hubs Floating Badge */}
       <div className="absolute left-4 top-4 z-50 flex items-center gap-2 rounded-full border border-slate-200 bg-white/95 px-3.5 py-1.5 text-xs font-semibold text-slate-700 shadow-sm backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/90 dark:text-slate-200">
         <span className="h-2 w-2 rounded-full bg-[#F59E0B]" />

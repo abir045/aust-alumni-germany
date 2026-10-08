@@ -29,7 +29,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-99 w-full border-b border-slate-100 bg-white/95 backdrop-blur-md transition-all dark:border-slate-800 dark:bg-slate-950/95">
+    <header className="sticky top-0 z-[1100] w-full border-b border-slate-100 bg-white/95 backdrop-blur-md transition-all dark:border-slate-800 dark:bg-slate-950/95">
       <div className="site-container flex h-24 items-center justify-between">
         {/* Brand Logo */}
         <div className="flex items-center">

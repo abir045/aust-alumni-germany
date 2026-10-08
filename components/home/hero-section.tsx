@@ -15,7 +15,7 @@ function HeroImageCard({ src, alt, className, rotation = "rotate-0" }: HeroCardP
   return (
     <div
       className={cn(
-        "pointer-events-none select-none absolute rounded-2xl md:rounded-3xl overflow-hidden border border-white/25 shadow-2xl shadow-black/50",
+        "pointer-events-none select-none absolute rounded-2xl md:rounded-3xl overflow-hidden ",
         rotation,
         className
       )}
