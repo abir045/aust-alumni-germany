@@ -1,0 +1,7 @@
+current_branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+if [ "$current_branch" = "main" ] || [ "$current_branch" = "master" ]; then
+  echo "Direct push to $current_branch branch is blocked. Please create a pull request."
+  exit 1
+fi
+
+npm run build

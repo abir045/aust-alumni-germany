@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 100" width="100%" height="100%">
+  <defs>
+    <!-- Clip path to keep German tricolor strictly inside the AUST shield contour -->
+    <clipPath id="aust-shield-clip">
+      <polygon points="10,8 86,8 86,64 64,84 32,84 10,64" />
+    </clipPath>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- ================= 1. SHIELD CREST ================= -->
+  <g id="shield-mark" transform="translate(6, 4)" filter="url(#soft-shadow)">
+    <!-- Shield Background: German Tricolor Stripes -->
+    <g clip-path="url(#aust-shield-clip)">
+      <rect x="0" y="0" width="96" height="30" fill="#111111" />
+      <rect x="0" y="30" width="96" height="30" fill="#DD0000" />
+      <rect x="0" y="60" width="96" height="34" fill="#FFCC00" />
+    </g>
+
+    <!-- White Inner Container for AUST Symbols -->
+    <polygon points="14,12 82,12 82,62 62,80 34,80 14,62" fill="#FFFFFF" opacity="0.96"/>
+
+    <!-- Outer Shield Border -->
+    <polygon points="10,8 86,8 86,64 64,84 32,84 10,64" 
+             fill="none" stroke="#1B1B1B" stroke-width="2.8" stroke-linejoin="round"/>
+
+    <!-- Top Iconic Green Arch / Roof -->
+    <path d="M 18 20 C 37 20 41 13 48 13 C 55 13 59 20 78 20 L 78 24 L 18 24 Z" fill="#13753E"/>
+
+    <!-- AUST Monogram -->
+    <text x="48" y="34" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+          font-size="10.5" 
+          font-weight="900" 
+          letter-spacing="2" 
+          text-anchor="middle" 
+          fill="#1E293B">AUST</text>
+
+    <!-- Inner Pillars & Gate -->
+    <g transform="translate(48, 48)">
+      <!-- Left pillar block -->
+      <polygon points="-16,-10 -5,-7 -5,11 -16,14" fill="#13753E"/>
+      <!-- Right pillar block -->
+      <polygon points="16,-10 5,-7 5,11 16,14" fill="#13753E"/>
+      <!-- Inner accent outline -->
+      <path d="M -20,-12 L -20,13 L -9,19 L 9,19 L 20,13 L 20,-12" 
+            fill="none" stroke="#D97706" stroke-width="1.2" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Founding Year -->
+    <text x="48" y="73" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+          font-size="6.5" 
+          font-weight="800" 
+          letter-spacing="0.4" 
+          text-anchor="middle" 
+          fill="#0F172A">1995</text>
+  </g>
+
+  <!-- ================= 2. COMPACT TYPOGRAPHY LOCKUP (50% REDUCED GAP) ================= -->
+  <g transform="translate(112, 12)">
+    <!-- Line 1: Primary Brand Name -->
+    <text x="0" y="27" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+          font-size="28" 
+          font-weight="900" 
+          letter-spacing="-0.5" 
+          fill="#0F172A">AUST <tspan fill="#0284C7">ALUMNI</tspan></text>
+
+    <!-- Line 2: Chapter Indicator + Flag (Tightened spacing) -->
+    <g transform="translate(1, 41)">
+      <!-- German Flag Bar -->
+      <g transform="translate(0, 2)">
+        <rect x="0" y="0" width="18" height="3.4" fill="#111111" rx="0.5"/>
+        <rect x="0" y="3.4" width="18" height="3.4" fill="#DD0000"/>
+        <rect x="0" y="6.8" width="18" height="3.4" fill="#FFCC00" rx="0.5"/>
+      </g>
+      <!-- Chapter Label -->
+      <text x="25" y="10.5" 
+            font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+            font-size="11.5" 
+            font-weight="700" 
+            letter-spacing="2.2" 
+            fill="#D97706">GERMANY CHAPTER</text>
+    </g>
+
+    <!-- Line 3: University Subtitle (Tightened spacing) -->
+    <text x="1" y="68" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+          font-size="9.5" 
+          font-weight="500" 
+          letter-spacing="0.3" 
+          fill="#475569">Ahsanullah University of Science &amp; Technology</text>
+  </g>
+</svg>

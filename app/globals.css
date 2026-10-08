@@ -1,26 +1,184 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-neutral: var(--color-neutral);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-surface-light-blue: var(--color-surface-light-blue);
+  --color-surface-white: var(--color-surface-white);
+  --color-surface-border: var(--color-surface-border);
+  --color-dark-blue: var(--dark-blue);
+  --color-desc-text: var(--desc-text);
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Brand Color Palette */
+    --color-primary: #0f2b5c;
+    --color-secondary: #f59e0b;
+    --color-tertiary: #ea580c;
+    --color-neutral: #64748b;
+
+    --color-surface-light-blue: #f1f6ff;
+    --color-surface-white: #ffffff;
+    --color-surface-border: #e2e8f0;
+
+    /* Status & Semantic Tokens */
+    --color-success: #16a34a;
+    --color-warning: #f59e0b;
+    --color-error: #dc2626;
+    --color-info: #2563eb;
+
+    /* Semantic Mappings */
+    --background: #ffffff;
+    --foreground: #0f172a;
+
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+
+    --popover: #ffffff;
+    --popover-foreground: #0f172a;
+
+    --primary: #0f2b5c;
+    --primary-foreground: #ffffff;
+
+    --secondary: #f59e0b;
+    --secondary-foreground: #0f172a;
+
+    --tertiary: #ea580c;
+    --tertiary-foreground: #ffffff;
+
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+
+    --accent: #f1f6ff;
+    --accent-foreground: #0f2b5c;
+
+    --destructive: #dc2626;
+    --destructive-foreground: #ffffff;
+
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #0f2b5c;
+
+    /* Titles & Descriptions Typography Tokens */
+    --dark-blue: #00163d;
+    --desc-text: #44464f;
+
+    /* Radius Scale */
+    --radius-none: 0px;
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-3xl: 24px;
+    --radius-4xl: 32px;
+    --radius-full: 9999px;
+    --radius: 8px;
+  }
+
+  .dark {
+    --background: #081226;
+    --foreground: #f8fafc;
+
+    --card: #0d1e3d;
+    --card-foreground: #f8fafc;
+
+    --popover: #0d1e3d;
+    --popover-foreground: #f8fafc;
+
+    --primary: #6093f5;
+    --primary-foreground: #081226;
+
+    --secondary: #fbbf24;
+    --secondary-foreground: #081226;
+
+    --tertiary: #fb923c;
+    --tertiary-foreground: #081226;
+
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+
+    --accent: #173ba2;
+    --accent-foreground: #f8fafc;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    --border: #1e3563;
+    --input: #1e3563;
+    --ring: #6093f5;
+
+    --dark-blue: #f8fafc;
+    --desc-text: #94a3b8;
   }
 }
 
 body {
-  background: var(--background);
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+
+/* Layout container */
+.site-container {
+  width: 100%;
+  max-width: 1680px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .site-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .site-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .site-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .site-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

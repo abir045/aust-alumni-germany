@@ -1,0 +1,26 @@
+/* Custom AOS enhancements & high performance transforms */
+[data-aos] {
+  pointer-events: auto;
+}
+
+[data-aos="fade-up-soft"] {
+  transform: translateY(20px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="fade-up-soft"].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+[data-aos="scale-in"] {
+  transform: scale(0.95);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="scale-in"].aos-animate {
+  transform: scale(1);
+  opacity: 1;
+}
